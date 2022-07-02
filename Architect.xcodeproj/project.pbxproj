@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		659E523C287058490089B96C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 659E523B287058490089B96C /* .gitignore */; };
 		65C15157286DAF0100744EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C15156286DAF0100744EFA /* AppDelegate.swift */; };
 		65C15159286DAF0100744EFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C15158286DAF0100744EFA /* SceneDelegate.swift */; };
 		65C1515B286DAF0100744EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1515A286DAF0100744EFA /* ViewController.swift */; };
@@ -17,7 +18,6 @@
 		65C15171286DAF0800744EFA /* ArchitectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C15170286DAF0800744EFA /* ArchitectTests.swift */; };
 		65C1517B286DAF0800744EFA /* ArchitectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1517A286DAF0800744EFA /* ArchitectUITests.swift */; };
 		65C1517D286DAF0800744EFA /* ArchitectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1517C286DAF0800744EFA /* ArchitectUITestsLaunchTests.swift */; };
-		65C1518A286DB28A00744EFA /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 65C15189286DB28A00744EFA /* gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		659E523B287058490089B96C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		65C15153286DAF0100744EFA /* Architect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Architect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C15156286DAF0100744EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C15158286DAF0100744EFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		65C15176286DAF0800744EFA /* ArchitectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchitectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C1517A286DAF0800744EFA /* ArchitectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectUITests.swift; sourceTree = "<group>"; };
 		65C1517C286DAF0800744EFA /* ArchitectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		65C15189286DB28A00744EFA /* gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gitignore; path = "../../../../../var/folders/sm/qflxk_px34d8x3k467rs73tw0000gn/T/com.apple.Notes/HardLinkURLTemp/AB574DE4-D12F-4E6D-98C5-725CAAE6E7EE/1655247947/gitignore"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		65C1514A286DAF0100744EFA = {
 			isa = PBXGroup;
 			children = (
-				65C15189286DB28A00744EFA /* gitignore */,
+				659E523B287058490089B96C /* .gitignore */,
 				65C15155286DAF0100744EFA /* Architect */,
 				65C1516F286DAF0800744EFA /* ArchitectTests */,
 				65C15179286DAF0800744EFA /* ArchitectUITests */,
@@ -237,8 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659E523C287058490089B96C /* .gitignore in Resources */,
 				65C15166286DAF0700744EFA /* LaunchScreen.storyboard in Resources */,
-				65C1518A286DB28A00744EFA /* gitignore in Resources */,
 				65C15163286DAF0700744EFA /* Assets.xcassets in Resources */,
 				65C1515E286DAF0100744EFA /* Main.storyboard in Resources */,
 			);
