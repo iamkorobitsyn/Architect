@@ -7,8 +7,11 @@
 
 import Foundation
 
-struct Person {
-    let firstName: String
-    let lastName: String
+struct Comment: Decodable {
+    var postId: Int
+    var id: Int
+    var name: String
+    var email: String
+    var body: String
 }
 

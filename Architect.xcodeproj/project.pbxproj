@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		659E523A287053250089B96C /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 659E5239287053250089B96C /* .gitignore */; };
+		65B27D0728745AE30000D663 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B27D0628745AE30000D663 /* NetworkService.swift */; };
 		65C15157286DAF0100744EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C15156286DAF0100744EFA /* AppDelegate.swift */; };
 		65C15159286DAF0100744EFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C15158286DAF0100744EFA /* SceneDelegate.swift */; };
 		65C1515B286DAF0100744EFA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1515A286DAF0100744EFA /* MainViewController.swift */; };
@@ -18,7 +19,7 @@
 		65C15171286DAF0800744EFA /* ArchitectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C15170286DAF0800744EFA /* ArchitectTests.swift */; };
 		65C1517B286DAF0800744EFA /* ArchitectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1517A286DAF0800744EFA /* ArchitectUITests.swift */; };
 		65C1517D286DAF0800744EFA /* ArchitectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1517C286DAF0800744EFA /* ArchitectUITestsLaunchTests.swift */; };
-		65C1518C28702E1400744EFA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1518B28702E1400744EFA /* Person.swift */; };
+		65C1518C28702E1400744EFA /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1518B28702E1400744EFA /* Comment.swift */; };
 		65C1518E28702EBA00744EFA /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1518D28702EBA00744EFA /* MainPresenter.swift */; };
 		65C1519628703A3300744EFA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65C1519528703A3300744EFA /* MainViewController.xib */; };
 		65C1519828703C7B00744EFA /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C1519728703C7B00744EFA /* ModuleBuilder.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		659E5239287053250089B96C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		65B27D0628745AE30000D663 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		65C15153286DAF0100744EFA /* Architect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Architect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C15156286DAF0100744EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65C15158286DAF0100744EFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		65C15176286DAF0800744EFA /* ArchitectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchitectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65C1517A286DAF0800744EFA /* ArchitectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectUITests.swift; sourceTree = "<group>"; };
 		65C1517C286DAF0800744EFA /* ArchitectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		65C1518B28702E1400744EFA /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		65C1518B28702E1400744EFA /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		65C1518D28702EBA00744EFA /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		65C1519528703A3300744EFA /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		65C1519728703C7B00744EFA /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65B27D0828745B2D0000D663 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				65B27D0628745AE30000D663 /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
 		65C1514A286DAF0100744EFA = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 				65C1519028702F4A00744EFA /* App */,
 				65C1518F28702F0E00744EFA /* Storyboards */,
 				65C151912870394A00744EFA /* MainModule */,
+				65B27D0828745B2D0000D663 /* ServiceLayer */,
 				65C15162286DAF0700744EFA /* Assets.xcassets */,
 				65C1515F286DAF0100744EFA /* Architect.xcdatamodeld */,
 			);
@@ -183,7 +194,7 @@
 		65C151932870396F00744EFA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				65C1518B28702E1400744EFA /* Person.swift */,
+				65C1518B28702E1400744EFA /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,8 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65C1518C28702E1400744EFA /* Person.swift in Sources */,
+				65C1518C28702E1400744EFA /* Comment.swift in Sources */,
 				65C1518E28702EBA00744EFA /* MainPresenter.swift in Sources */,
+				65B27D0728745AE30000D663 /* NetworkService.swift in Sources */,
 				65C1515B286DAF0100744EFA /* MainViewController.swift in Sources */,
 				65C15161286DAF0100744EFA /* Architect.xcdatamodeld in Sources */,
 				65C1519828703C7B00744EFA /* ModuleBuilder.swift in Sources */,
