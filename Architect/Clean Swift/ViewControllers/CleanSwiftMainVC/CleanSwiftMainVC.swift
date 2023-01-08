@@ -2,7 +2,7 @@
 //  CleanSwiftMainViewController.swift
 //  Architect
 //
-//  Created by Александр Коробицын on 18.11.2022.
+//  Created by Александр Коробицын on 18.11.2022
 //
 
 import UIKit
