@@ -24,6 +24,8 @@
 		658EDE00292A6C34003071B5 /* CleanSwiftModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658EDDFF292A6C34003071B5 /* CleanSwiftModels.swift */; };
 		658EDE02292A6C44003071B5 /* CleanSwiftNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658EDE01292A6C44003071B5 /* CleanSwiftNetworkManager.swift */; };
 		658EDE04292A6C53003071B5 /* CleanSwiftStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658EDE03292A6C53003071B5 /* CleanSwiftStorageManager.swift */; };
+		6598E6A0296C5BF300BB778D /* CleanSwiftMainVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6598E69F296C5BF300BB778D /* CleanSwiftMainVCModels.swift */; };
+		6598E6A2296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6598E6A1296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift */; };
 		65BA1EEA293E1EB300CF73F7 /* MVVMMainVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BA1EE9293E1EB300CF73F7 /* MVVMMainVCViewModel.swift */; };
 		65BA1EEC293E1EC200CF73F7 /* MainCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BA1EEB293E1EC200CF73F7 /* MainCellViewModel.swift */; };
 		65BA1EEE293E1ED900CF73F7 /* DetailVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BA1EED293E1ED900CF73F7 /* DetailVCViewModel.swift */; };
@@ -70,6 +72,8 @@
 		658EDDFF292A6C34003071B5 /* CleanSwiftModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftModels.swift; sourceTree = "<group>"; };
 		658EDE01292A6C44003071B5 /* CleanSwiftNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftNetworkManager.swift; sourceTree = "<group>"; };
 		658EDE03292A6C53003071B5 /* CleanSwiftStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftStorageManager.swift; sourceTree = "<group>"; };
+		6598E69F296C5BF300BB778D /* CleanSwiftMainVCModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftMainVCModels.swift; sourceTree = "<group>"; };
+		6598E6A1296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftMainVCInteractor.swift; sourceTree = "<group>"; };
 		65BA1EE9293E1EB300CF73F7 /* MVVMMainVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMainVCViewModel.swift; sourceTree = "<group>"; };
 		65BA1EEB293E1EC200CF73F7 /* MainCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModel.swift; sourceTree = "<group>"; };
 		65BA1EED293E1ED900CF73F7 /* DetailVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVCViewModel.swift; sourceTree = "<group>"; };
@@ -310,6 +314,8 @@
 			isa = PBXGroup;
 			children = (
 				65DDF69C2927C577006F2416 /* CleanSwiftMainVC.swift */,
+				6598E6A1296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift */,
+				6598E69F296C5BF300BB778D /* CleanSwiftMainVCModels.swift */,
 			);
 			path = CleanSwiftMainVC;
 			sourceTree = "<group>";
@@ -504,7 +510,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6598E6A2296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift in Sources */,
 				65BA1EEA293E1EB300CF73F7 /* MVVMMainVCViewModel.swift in Sources */,
+				6598E6A0296C5BF300BB778D /* CleanSwiftMainVCModels.swift in Sources */,
 				65BA1EEE293E1ED900CF73F7 /* DetailVCViewModel.swift in Sources */,
 				6567F68A2928F90400DE5DE4 /* MVVMStorageManager.swift in Sources */,
 				658EDE04292A6C53003071B5 /* CleanSwiftStorageManager.swift in Sources */,

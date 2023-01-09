@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol CleanSwiftMainVCDisplayLogic {
+    func displayMainVC(display: MainVC.Show.ViewModel)
+}
+
 class CleanSwiftMainVC: UIViewController {
+    
+    var interactor: CleanSwiftMainVCBuisnessLogic?
     
     private let tableView = UITableView()
     private let cell = CleanSwiftMainCell()
@@ -33,18 +39,6 @@ class CleanSwiftMainVC: UIViewController {
     //MARK: - Fetch Objects
     
     private func fetch() {
-        CleanSwiftNetworkManager.instance.fetchData(dataType: CleanSwiftFetchObjects.self,
-                                          url: CleanSwiftNetworkManager.instance.api) { result in
-            switch result {
-            case.success(let objects):
-                DispatchQueue.main.async {
-                    self.objects = objects
-                    self.tableView.reloadData()
-                }
-            case.failure(let error):
-                print(error)
-            }
-        }
     }
 }
 
