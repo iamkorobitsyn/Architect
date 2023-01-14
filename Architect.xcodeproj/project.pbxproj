@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		655496062962F3FF008C3D8F /* VIPERMainVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655496052962F3FF008C3D8F /* VIPERMainVCRouter.swift */; };
 		6567F68A2928F90400DE5DE4 /* MVVMStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6567F6892928F90400DE5DE4 /* MVVMStorageManager.swift */; };
+		65694AD3296D85CE00A33B84 /* CleanSwiftMainVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65694AD2296D85CE00A33B84 /* CleanSwiftMainVCPresenter.swift */; };
+		65694AD5296D8AC100A33B84 /* CleanSwiftMainVCConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65694AD4296D8AC100A33B84 /* CleanSwiftMainVCConfigurator.swift */; };
+		65694AD7296D958E00A33B84 /* CleanSwiftMainVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65694AD6296D958E00A33B84 /* CleanSwiftMainVCRouter.swift */; };
+		65694AD92973037100A33B84 /* CleanSwiftDetailVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65694AD82973037100A33B84 /* CleanSwiftDetailVCRouter.swift */; };
+		65694ADB297303D800A33B84 /* CleanSwiftDetailVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65694ADA297303D800A33B84 /* CleanSwiftDetailVCInteractor.swift */; };
+		65694ADD29730B1000A33B84 /* CleanSwiftDetaliVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65694ADC29730B1000A33B84 /* CleanSwiftDetaliVCPresenter.swift */; };
+		65694ADF29730B1E00A33B84 /* CleanSwiftDetailVCConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65694ADE29730B1E00A33B84 /* CleanSwiftDetailVCConfigurator.swift */; };
+		65694AE129730B3A00A33B84 /* CleanSwiftDetailVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65694AE029730B3A00A33B84 /* CleanSwiftDetailVCModels.swift */; };
 		65774F4329681790008ACC7A /* VIPERDetailVCConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65774F4229681790008ACC7A /* VIPERDetailVCConfigurator.swift */; };
 		65774F4529682177008ACC7A /* VIPERDetailVCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65774F4429682177008ACC7A /* VIPERDetailVCPresenter.swift */; };
 		65774F472968228F008ACC7A /* VIPERDetailVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65774F462968228F008ACC7A /* VIPERDetailVCInteractor.swift */; };
@@ -57,6 +65,14 @@
 /* Begin PBXFileReference section */
 		655496052962F3FF008C3D8F /* VIPERMainVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERMainVCRouter.swift; sourceTree = "<group>"; };
 		6567F6892928F90400DE5DE4 /* MVVMStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMStorageManager.swift; sourceTree = "<group>"; };
+		65694AD2296D85CE00A33B84 /* CleanSwiftMainVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftMainVCPresenter.swift; sourceTree = "<group>"; };
+		65694AD4296D8AC100A33B84 /* CleanSwiftMainVCConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftMainVCConfigurator.swift; sourceTree = "<group>"; };
+		65694AD6296D958E00A33B84 /* CleanSwiftMainVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftMainVCRouter.swift; sourceTree = "<group>"; };
+		65694AD82973037100A33B84 /* CleanSwiftDetailVCRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftDetailVCRouter.swift; sourceTree = "<group>"; };
+		65694ADA297303D800A33B84 /* CleanSwiftDetailVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftDetailVCInteractor.swift; sourceTree = "<group>"; };
+		65694ADC29730B1000A33B84 /* CleanSwiftDetaliVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftDetaliVCPresenter.swift; sourceTree = "<group>"; };
+		65694ADE29730B1E00A33B84 /* CleanSwiftDetailVCConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftDetailVCConfigurator.swift; sourceTree = "<group>"; };
+		65694AE029730B3A00A33B84 /* CleanSwiftDetailVCModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftDetailVCModels.swift; sourceTree = "<group>"; };
 		65774F4229681790008ACC7A /* VIPERDetailVCConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERDetailVCConfigurator.swift; sourceTree = "<group>"; };
 		65774F4429682177008ACC7A /* VIPERDetailVCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERDetailVCPresenter.swift; sourceTree = "<group>"; };
 		65774F462968228F008ACC7A /* VIPERDetailVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERDetailVCInteractor.swift; sourceTree = "<group>"; };
@@ -217,8 +233,8 @@
 		656517FA292D93E40067794B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				6589BFB7292D9651005D5B70 /* CleanSwiftMainVC */,
 				6589BFB8292D9658005D5B70 /* CleanSwiftMainCell */,
+				6589BFB7292D9651005D5B70 /* CleanSwiftMainVC */,
 				6589BFB9292D965F005D5B70 /* CleanSwiftDetailVC */,
 			);
 			path = ViewControllers;
@@ -314,7 +330,10 @@
 			isa = PBXGroup;
 			children = (
 				65DDF69C2927C577006F2416 /* CleanSwiftMainVC.swift */,
+				65694AD6296D958E00A33B84 /* CleanSwiftMainVCRouter.swift */,
 				6598E6A1296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift */,
+				65694AD2296D85CE00A33B84 /* CleanSwiftMainVCPresenter.swift */,
+				65694AD4296D8AC100A33B84 /* CleanSwiftMainVCConfigurator.swift */,
 				6598E69F296C5BF300BB778D /* CleanSwiftMainVCModels.swift */,
 			);
 			path = CleanSwiftMainVC;
@@ -332,6 +351,11 @@
 			isa = PBXGroup;
 			children = (
 				65DDF6B32927FDDE006F2416 /* CleanSwiftDetailVC.swift */,
+				65694AD82973037100A33B84 /* CleanSwiftDetailVCRouter.swift */,
+				65694ADA297303D800A33B84 /* CleanSwiftDetailVCInteractor.swift */,
+				65694ADC29730B1000A33B84 /* CleanSwiftDetaliVCPresenter.swift */,
+				65694ADE29730B1E00A33B84 /* CleanSwiftDetailVCConfigurator.swift */,
+				65694AE029730B3A00A33B84 /* CleanSwiftDetailVCModels.swift */,
 			);
 			path = CleanSwiftDetailVC;
 			sourceTree = "<group>";
@@ -514,10 +538,12 @@
 				65BA1EEA293E1EB300CF73F7 /* MVVMMainVCViewModel.swift in Sources */,
 				6598E6A0296C5BF300BB778D /* CleanSwiftMainVCModels.swift in Sources */,
 				65BA1EEE293E1ED900CF73F7 /* DetailVCViewModel.swift in Sources */,
+				65694ADB297303D800A33B84 /* CleanSwiftDetailVCInteractor.swift in Sources */,
 				6567F68A2928F90400DE5DE4 /* MVVMStorageManager.swift in Sources */,
 				658EDE04292A6C53003071B5 /* CleanSwiftStorageManager.swift in Sources */,
 				65BA1EEC293E1EC200CF73F7 /* MainCellViewModel.swift in Sources */,
 				658EDDFA292A6A53003071B5 /* VIPERModels.swift in Sources */,
+				65694ADD29730B1000A33B84 /* CleanSwiftDetaliVCPresenter.swift in Sources */,
 				65DDF6B42927FDDE006F2416 /* CleanSwiftDetailVC.swift in Sources */,
 				65F8A6B3295F2A090071E06C /* VIPERMainVCPresenter.swift in Sources */,
 				65DDF6972927BD69006F2416 /* TabBarController.swift in Sources */,
@@ -527,6 +553,8 @@
 				658EDE00292A6C34003071B5 /* CleanSwiftModels.swift in Sources */,
 				65DDF6A82927E100006F2416 /* MVVMMainCell.swift in Sources */,
 				658EDDF8292A67D1003071B5 /* MVPStorageManager.swift in Sources */,
+				65694AE129730B3A00A33B84 /* CleanSwiftDetailVCModels.swift in Sources */,
+				65694AD92973037100A33B84 /* CleanSwiftDetailVCRouter.swift in Sources */,
 				65F03FDE29284416008E3C16 /* MVVMNetworkManager.swift in Sources */,
 				65DDF69B2927C520006F2416 /* VIPERMainVC.swift in Sources */,
 				65DDF6AE2927FB0E006F2416 /* MVPMainCell.swift in Sources */,
@@ -534,9 +562,12 @@
 				65DDF6992927BF18006F2416 /* MVVMMainVC.swift in Sources */,
 				65DDF6B22927FC5E006F2416 /* VIPERMainCell.swift in Sources */,
 				65774F4329681790008ACC7A /* VIPERDetailVCConfigurator.swift in Sources */,
+				65694ADF29730B1E00A33B84 /* CleanSwiftDetailVCConfigurator.swift in Sources */,
+				65694AD3296D85CE00A33B84 /* CleanSwiftMainVCPresenter.swift in Sources */,
 				658EDDF4292A6726003071B5 /* MVPModels.swift in Sources */,
 				6589BFC5292D9879005D5B70 /* MVPDetailVM.swift in Sources */,
 				65F03FDC29284403008E3C16 /* MVVMModels.swift in Sources */,
+				65694AD7296D958E00A33B84 /* CleanSwiftMainVCRouter.swift in Sources */,
 				65774F4529682177008ACC7A /* VIPERDetailVCPresenter.swift in Sources */,
 				65DDF69D2927C577006F2416 /* CleanSwiftMainVC.swift in Sources */,
 				65F8A6B1295F26060071E06C /* VIPERMainCellViewModel.swift in Sources */,
@@ -550,6 +581,7 @@
 				65EA4A67293A758400C2DECD /* Box.swift in Sources */,
 				65FA2A502927BBE300FA1A37 /* MVPMainVC.swift in Sources */,
 				65FA2A4C2927BBE300FA1A37 /* AppDelegate.swift in Sources */,
+				65694AD5296D8AC100A33B84 /* CleanSwiftMainVCConfigurator.swift in Sources */,
 				65DDF6A62927D8ED006F2416 /* MVVMDetailVC.swift in Sources */,
 				65774F472968228F008ACC7A /* VIPERDetailVCInteractor.swift in Sources */,
 				658EDDFC292A6A6B003071B5 /* VIPERNetworkManager.swift in Sources */,

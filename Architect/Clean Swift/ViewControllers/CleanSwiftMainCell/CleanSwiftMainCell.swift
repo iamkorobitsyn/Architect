@@ -7,15 +7,41 @@
 
 import UIKit
 
-class CleanSwiftMainCell: UITableViewCell {
+protocol CleanSwiftCellRepresentable {
+    var viewModel: CellIdentifiable? {get set}
+}
+
+class CleanSwiftMainCell: UITableViewCell, CleanSwiftCellRepresentable {
+    
+    var viewModel: CellIdentifiable? {
+        didSet {
+            update()
+        }
+    }
     
     let photo = UIImageView()
     private let photoSide: CGFloat = 78
-    let nameSurename = UILabel()
+    var nameSurename = UILabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         instanceViews()
+    }
+    
+    private func update() {
+        guard let viewModel = self.viewModel as?
+                MainVC.ShowUsers.ViewModel.CellViewModel else {return}
+        self.nameSurename.text = viewModel.nameSurename
+        
+        CleanSwiftNetworkManager.instance.fetchImage(url: viewModel.imageURL) { result in
+            switch result {
+            case .success(let imageData):
+                self.photo.image = UIImage(data: imageData)
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
     }
     
     //MARK: - InstanceViews

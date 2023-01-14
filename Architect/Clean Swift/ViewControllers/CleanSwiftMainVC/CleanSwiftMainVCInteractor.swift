@@ -17,6 +17,8 @@ protocol CleanSwiftMainVCDataStore {
 
 
 class CleanSwiftMainVCInteractor: CleanSwiftMainVCBuisnessLogic, CleanSwiftMainVCDataStore {
+    
+    var presenter: CleanSwiftMainVCPresenter?
     var users: [CleanSwiftUser] = []
     
     func fetchUsers() {
@@ -26,6 +28,8 @@ class CleanSwiftMainVCInteractor: CleanSwiftMainVCBuisnessLogic, CleanSwiftMainV
                 
             case .success(let objects):
                 self.users = objects.users
+                let respounce = MainVC.ShowUsers.Respounce(users: self.users)
+                self.presenter?.presentUsers(respounce: respounce)
             case .failure(let error):
                 print(error)
             }

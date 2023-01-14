@@ -7,22 +7,27 @@
 
 import UIKit
 
-protocol CleanSwiftMainVCDisplayLogic {
-    func displayMainVC(display: MainVC.Show.ViewModel)
+protocol CleanSwiftMainVCDisplayLogic: AnyObject {
+    func displayMainVC(display: MainVC.ShowUsers.ViewModel)
 }
 
 class CleanSwiftMainVC: UIViewController {
     
     var interactor: CleanSwiftMainVCBuisnessLogic?
+    var router: CleanSwiftMainVCRouter?
     
     private let tableView = UITableView()
     private let cell = CleanSwiftMainCell()
-    private var objects: CleanSwiftFetchObjects?
+    private var rows: [CellIdentifiable] = []
+//    var router: (NSObjectProtocol & CleanSwiftMainVCListRoutingLogic & CleanSwiftMainVCDataPassing)?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        CleanSwiftMainVCConfigurator.instance.configure(viewController: self)
+        interactor?.fetchUsers()
         instanceTableView()
-        fetch()
+        
     }
     
     //MARK: - InstanceTableView
@@ -36,10 +41,16 @@ class CleanSwiftMainVC: UIViewController {
         tableView.register(CleanSwiftMainCell.self, forCellReuseIdentifier: "cell")
     }
     
-    //MARK: - Fetch Objects
+    // MARK: - SegueRoutingExample
     
-    private func fetch() {
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let scene = segue.identifier {
+//            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+//            if let router = router, router.responds(to: selector) {
+//                router.perform(selector, with: segue)
+//            }
+//        }
+//    }
 }
 
 extension CleanSwiftMainVC: UITableViewDataSource, UITableViewDelegate {
@@ -47,30 +58,16 @@ extension CleanSwiftMainVC: UITableViewDataSource, UITableViewDelegate {
     //MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        objects?.users.count ?? 0
+        self.rows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
+        if let cell = tableView.dequeueReusableCell(withIdentifier: rows[indexPath.row].identifire,
                                                     for: indexPath) as? CleanSwiftMainCell {
+            cell.viewModel = rows[indexPath.row]
             cell.backgroundColor = UIColor.lightGray
             cell.selectionStyle = .none
                   
-            if let objects = objects {
-                
-                let text = "\(objects.users[indexPath.row].firstName) \(objects.users[indexPath.row].lastName)"
-                cell.nameSurename.text = text
-                
-                CleanSwiftNetworkManager.instance.fetchImage(url: objects.users[indexPath.row].image) { result in
-                    switch result {
-                    case.success(let image):
-                        cell.photo.image = UIImage(data: image)
-                    case.failure(let error):
-                        print(error)
-                    }
-                }
-                
-            }
             return cell
         }
         return UITableViewCell()
@@ -80,12 +77,19 @@ extension CleanSwiftMainVC: UITableViewDataSource, UITableViewDelegate {
     //MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = CleanSwiftDetailVC()
-        vc.object = objects?.users[indexPath.row]
-        navigationController?.pushViewController(vc, animated: true)
+        router?.routeToDetailVC(indexPath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         80
     }
+}
+
+extension CleanSwiftMainVC: CleanSwiftMainVCDisplayLogic {
+    func displayMainVC(display: MainVC.ShowUsers.ViewModel) {
+        self.rows = display.rows
+        self.tableView.reloadData()
+    }
+    
+    
 }

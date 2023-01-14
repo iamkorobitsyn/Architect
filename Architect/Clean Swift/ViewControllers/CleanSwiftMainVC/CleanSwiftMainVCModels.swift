@@ -27,6 +27,7 @@ enum MainVC {
             struct CellViewModel: CellIdentifiable {
                 
                 let nameSurename: String
+                let imageURL: String
                 
                 var identifire: String {
                     "cell"
@@ -37,6 +38,7 @@ enum MainVC {
                 
                 init(user: CleanSwiftUser) {
                     self.nameSurename = "\(user.firstName) \(user.lastName)"
+                    self.imageURL = user.image
                 }
             }
             

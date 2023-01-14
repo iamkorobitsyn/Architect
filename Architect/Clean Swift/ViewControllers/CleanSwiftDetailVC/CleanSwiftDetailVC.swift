@@ -7,9 +7,30 @@
 
 import UIKit
 
+protocol CleanSwiftDetailVCDisplayLogic: AnyObject {
+    func displayDetailVC(display: DetailVC.ShowDetails.ViewModel)
+}
+
 class CleanSwiftDetailVC: UIViewController {
     
-    var object: CleanSwiftUser?
+    // MARK: Object lifecycle
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        CleanSwiftDetailVCConfigurator.instance.configure(viewController: self)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        CleanSwiftDetailVCConfigurator.instance.configure(viewController: self)
+    }
+    
+    var interactor: CleanSwiftDetailVCInteractor?
+    var router: CleanSwiftDetalVCRouter?
+    
+    
+   
+    
+    
     
     private let photo = UIImageView()
     private let photoSide: CGFloat = 200
@@ -25,35 +46,35 @@ class CleanSwiftDetailVC: UIViewController {
     private let genderIcon = UIImageView()
     private let mailIcon = UIImageView()
     
-    private var isFavorite = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor?.getUser()
+        instanceViews()
+
         title = "Details"
         view.backgroundColor = UIColor.lightGray
+
+//        getFavoriteStatus()
         
-        instanceViews()
-        getFavoriteStatus()
-        
-        likeButton.addTarget(self, action: #selector(toggleFavorite), for: .touchUpInside)
+//        likeButton.addTarget(self, action: #selector(toggleFavorite), for: .touchUpInside)
     }
     
     //MARK: - Instance Favorite Status
     
-    private func getFavoriteStatus() {
-        guard let object = object else { return }
-        isFavorite = CleanSwiftStorageManager.instance.getFavoriteStatus(for: "CleanSwift\(object.email)")
-        likeButton.tintColor = isFavorite ? .red : .white
-    }
+//    private func getFavoriteStatus() {
+//        guard let object = user else { return }
+//        isFavorite = CleanSwiftStorageManager.instance.getFavoriteStatus(for: "CleanSwift\(object.email)")
+//        likeButton.tintColor = isFavorite ? .red : .white
+//    }
     
-    @objc func toggleFavorite() {
-        isFavorite.toggle()
-        likeButton.tintColor = isFavorite ? .red : .white
-        
-        guard let object = object else { return }
-        CleanSwiftStorageManager.instance.setFavoriteStatus(for: "CleanSwift\(object.email)",
-                                                      for: isFavorite)
-    }
+//    @objc func toggleFavorite() {
+//        isFavorite.toggle()
+//        likeButton.tintColor = isFavorite ? .red : .white
+//
+//        guard let object = user else { return }
+//        CleanSwiftStorageManager.instance.setFavoriteStatus(for: "CleanSwift\(object.email)",
+//                                                      for: isFavorite)
+//    }
     
     //MARK: - Instance Views
     
@@ -64,24 +85,6 @@ class CleanSwiftDetailVC: UIViewController {
         
         for view in viewArray {
             self.view.addSubview(view)
-        }
-        
-        if let object = object {
-            
-            nameSurename.text = "\(object.firstName) \(object.lastName)"
-            age.text = String(object.age)
-            gender.text = object.gender
-            mail.text = object.email
-            
-            
-            CleanSwiftNetworkManager.instance.fetchImage(url: object.image) { result in
-                switch result {
-                case.success(let image):
-                    self.photo.image = UIImage(data: image)
-                case.failure(let error):
-                    print(error)
-                }
-            }
         }
         
         photo.backgroundColor = UIColor.darkGray.withAlphaComponent(0.5)
@@ -160,5 +163,14 @@ class CleanSwiftDetailVC: UIViewController {
             mailIcon.centerYAnchor.constraint(equalTo: mail.centerYAnchor),
             mailIcon.trailingAnchor.constraint(equalTo: mail.leadingAnchor, constant: -10)
         ])
+    }
+}
+
+extension CleanSwiftDetailVC: CleanSwiftDetailVCDisplayLogic {
+    func displayDetailVC(display: DetailVC.ShowDetails.ViewModel) {
+        self.nameSurename.text = display.nameSurename
+        self.age.text = display.age
+        self.gender.text = display.gender
+        self.mail.text = display.mail
     }
 }
