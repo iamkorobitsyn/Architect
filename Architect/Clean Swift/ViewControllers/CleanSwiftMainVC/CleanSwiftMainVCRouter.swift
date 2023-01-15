@@ -20,7 +20,6 @@ class CleanSwiftMainVCRouter: NSObject, CleanSwiftMainVCListRoutingLogic, CleanS
     
     weak var viewController: CleanSwiftMainVC?
     var dataStore: CleanSwiftMainVCDataStore?
-    
     var users: [CleanSwiftUser] = []
     
     func routeToDetailVC(indexPath: IndexPath) {
@@ -28,12 +27,8 @@ class CleanSwiftMainVCRouter: NSObject, CleanSwiftMainVCListRoutingLogic, CleanS
         guard let dataStore = dataStore else {return}
         destinationVC.router?.dataStore?.user = dataStore.users[indexPath.row]
         viewController?.navigationController?.pushViewController(destinationVC, animated: true)
-        
-        print(dataStore.users.count)
     }
     
-    
-
     // MARK: SegueRoutingExamle
 
 //    func routeToDetailVC(segue: UIStoryboardSegue?) {

@@ -19,8 +19,6 @@ class CleanSwiftMainVC: UIViewController {
     private let tableView = UITableView()
     private let cell = CleanSwiftMainCell()
     private var rows: [CellIdentifiable] = []
-//    var router: (NSObjectProtocol & CleanSwiftMainVCListRoutingLogic & CleanSwiftMainVCDataPassing)?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

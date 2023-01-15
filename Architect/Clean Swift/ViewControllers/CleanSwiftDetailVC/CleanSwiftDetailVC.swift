@@ -9,6 +9,8 @@ import UIKit
 
 protocol CleanSwiftDetailVCDisplayLogic: AnyObject {
     func displayDetailVC(display: DetailVC.ShowDetails.ViewModel)
+    func displayImage(display: DetailVC.ShowDetails.ImageData)
+    func displayFavoriteStatus(display: DetailVC.SetStatus.Status)
 }
 
 class CleanSwiftDetailVC: UIViewController {
@@ -26,12 +28,7 @@ class CleanSwiftDetailVC: UIViewController {
     
     var interactor: CleanSwiftDetailVCInteractor?
     var router: CleanSwiftDetalVCRouter?
-    
-    
-   
-    
-    
-    
+
     private let photo = UIImageView()
     private let photoSide: CGFloat = 200
     
@@ -48,33 +45,23 @@ class CleanSwiftDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        likeButton.addTarget(self, action: #selector(toggleFavorite), for: .touchUpInside)
+        view.backgroundColor = UIColor.lightGray
+        title = "Details"
+        
         interactor?.getUser()
         instanceViews()
-
-        title = "Details"
-        view.backgroundColor = UIColor.lightGray
-
-//        getFavoriteStatus()
-        
-//        likeButton.addTarget(self, action: #selector(toggleFavorite), for: .touchUpInside)
+        interactor?.getFavoriteStatus()
+ 
     }
     
     //MARK: - Instance Favorite Status
     
-//    private func getFavoriteStatus() {
-//        guard let object = user else { return }
-//        isFavorite = CleanSwiftStorageManager.instance.getFavoriteStatus(for: "CleanSwift\(object.email)")
-//        likeButton.tintColor = isFavorite ? .red : .white
-//    }
     
-//    @objc func toggleFavorite() {
-//        isFavorite.toggle()
-//        likeButton.tintColor = isFavorite ? .red : .white
-//
-//        guard let object = user else { return }
-//        CleanSwiftStorageManager.instance.setFavoriteStatus(for: "CleanSwift\(object.email)",
-//                                                      for: isFavorite)
-//    }
+    @objc func toggleFavorite() {
+        interactor?.setFavoriteStatus()
+    }
     
     //MARK: - Instance Views
     
@@ -167,10 +154,19 @@ class CleanSwiftDetailVC: UIViewController {
 }
 
 extension CleanSwiftDetailVC: CleanSwiftDetailVCDisplayLogic {
+
     func displayDetailVC(display: DetailVC.ShowDetails.ViewModel) {
         self.nameSurename.text = display.nameSurename
         self.age.text = display.age
         self.gender.text = display.gender
         self.mail.text = display.mail
+    }
+    
+    func displayImage(display: DetailVC.ShowDetails.ImageData) {
+        self.photo.image = UIImage(data: display.image)
+    }
+    
+    func displayFavoriteStatus(display: DetailVC.SetStatus.Status) {
+        self.likeButton.tintColor = display.status ? .red : .white
     }
 }
