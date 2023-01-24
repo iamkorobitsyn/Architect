@@ -34,10 +34,10 @@
 		658EDE04292A6C53003071B5 /* CleanSwiftStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658EDE03292A6C53003071B5 /* CleanSwiftStorageManager.swift */; };
 		6598E6A0296C5BF300BB778D /* CleanSwiftMainVCModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6598E69F296C5BF300BB778D /* CleanSwiftMainVCModels.swift */; };
 		6598E6A2296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6598E6A1296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift */; };
+		65A1A511297FADCB001985DB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 65A1A510297FADCB001985DB /* .gitignore */; };
 		65BA1EEA293E1EB300CF73F7 /* MVVMMainVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BA1EE9293E1EB300CF73F7 /* MVVMMainVCViewModel.swift */; };
 		65BA1EEC293E1EC200CF73F7 /* MainCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BA1EEB293E1EC200CF73F7 /* MainCellViewModel.swift */; };
 		65BA1EEE293E1ED900CF73F7 /* DetailVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BA1EED293E1ED900CF73F7 /* DetailVCViewModel.swift */; };
-		65C042A8296B721F0070624E /* gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 65C042A7296B721F0070624E /* gitignore */; };
 		65DDF6972927BD69006F2416 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DDF6962927BD69006F2416 /* TabBarController.swift */; };
 		65DDF6992927BF18006F2416 /* MVVMMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DDF6982927BF18006F2416 /* MVVMMainVC.swift */; };
 		65DDF69B2927C520006F2416 /* VIPERMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DDF69A2927C520006F2416 /* VIPERMainVC.swift */; };
@@ -90,10 +90,10 @@
 		658EDE03292A6C53003071B5 /* CleanSwiftStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftStorageManager.swift; sourceTree = "<group>"; };
 		6598E69F296C5BF300BB778D /* CleanSwiftMainVCModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftMainVCModels.swift; sourceTree = "<group>"; };
 		6598E6A1296C5E4900BB778D /* CleanSwiftMainVCInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanSwiftMainVCInteractor.swift; sourceTree = "<group>"; };
+		65A1A510297FADCB001985DB /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		65BA1EE9293E1EB300CF73F7 /* MVVMMainVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMainVCViewModel.swift; sourceTree = "<group>"; };
 		65BA1EEB293E1EC200CF73F7 /* MainCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCellViewModel.swift; sourceTree = "<group>"; };
 		65BA1EED293E1ED900CF73F7 /* DetailVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVCViewModel.swift; sourceTree = "<group>"; };
-		65C042A7296B721F0070624E /* gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gitignore; path = ../../../Desktop/gitignore; sourceTree = "<group>"; };
 		65DDF6962927BD69006F2416 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		65DDF6982927BF18006F2416 /* MVVMMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMMainVC.swift; sourceTree = "<group>"; };
 		65DDF69A2927C520006F2416 /* VIPERMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERMainVC.swift; sourceTree = "<group>"; };
@@ -436,7 +436,7 @@
 		65FA2A3F2927BBE300FA1A37 = {
 			isa = PBXGroup;
 			children = (
-				65C042A7296B721F0070624E /* gitignore */,
+				65A1A510297FADCB001985DB /* .gitignore */,
 				65FA2A4A2927BBE300FA1A37 /* Architect */,
 				65FA2A492927BBE300FA1A37 /* Products */,
 			);
@@ -523,7 +523,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65FA2A552927BBE400FA1A37 /* Assets.xcassets in Resources */,
-				65C042A8296B721F0070624E /* gitignore in Resources */,
+				65A1A511297FADCB001985DB /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
